@@ -1,10 +1,31 @@
-const path = require("path")
+const path = require("path");
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  createPage({
-    path: "someblogpost",
-    component: path.resolve("./src/components/postLayout.js")
-  })
-}
+  const createPagesFromMarkdown = async () => {
+    const { data } = await graphql(`
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `);
+
+    const markdownPages = data.allMarkdownRemark.edges;
+    markdownPages.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.slug,
+        component: path.resolve("./src/components/postLayout.js"),
+      });
+    });
+  };
+
+  return createPagesFromMarkdown();
+};

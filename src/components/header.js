@@ -15,7 +15,7 @@ const Header = () => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `0.5rem`,
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -32,7 +32,7 @@ const Header = () => (
         </Link>
         <img src={logo} alt="logo"
           style={{
-            width: `63px`,
+            width: `51px`,
             float: `left`,
           }} />
       </h1>

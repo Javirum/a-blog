@@ -1,15 +1,16 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import gatsbyLogo from "../images/gatsby-icon.png"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
+import logo from "../images/ALBERT.png";
+import styled from "styled-components";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+const HeaderWrapper = styled.div`
+  background: #663399;
+  margin-bottom: 1.45rem,
+`;
+
+const Header = () => (
+  <HeaderWrapper>
     <div
       style={{
         margin: `0 auto`,
@@ -23,18 +24,20 @@ const Header = ({ siteTitle }) => (
           style={{
             color: `white`,
             textDecoration: `none`,
+            fontSize: `20px`,
+            marginLeft: `50px`
           }}
         >
-          {siteTitle}
+          Finance & Voiceover
         </Link>
-        <img src={gatsbyLogo} alt="logo"
+        <img src={logo} alt="logo"
           style={{
-            width: `100px`,
+            width: `63px`,
             float: `left`,
           }} />
       </h1>
     </div>
-  </header>
+  </HeaderWrapper>
 )
 
 Header.propTypes = {

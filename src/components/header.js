@@ -32,17 +32,6 @@ const Header = () => (
     >
       About
       </Link>
-    <Link
-      to="/about"
-      style={{
-        color: `white`,
-        textDecoration: `none`,
-        fontSize: `20px`,
-        marginLeft: `50px`
-      }}
-    >
-      Contact
-      </Link>
   </HeaderWrapper >
 )
 

@@ -1,43 +1,49 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-import logo from "../images/ALBERT.png";
 import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
   background: #663399;
-  margin-bottom: 1.45rem,
+  padding: 10px;
 `;
 
 const Header = () => (
   <HeaderWrapper>
-    <div
+    <Link
+      to="/"
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0.5rem`,
+        color: `white`,
+        textDecoration: `none`,
+        fontSize: `45px`,
+        marginLeft: `50px`
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-            fontSize: `20px`,
-            marginLeft: `50px`
-          }}
-        >
-          Finance & Voiceover
-        </Link>
-        <img src={logo} alt="logo"
-          style={{
-            width: `51px`,
-            float: `left`,
-          }} />
-      </h1>
-    </div>
-  </HeaderWrapper>
+      Albert
+      </Link>
+    <Link
+      to="/about"
+      style={{
+        color: `white`,
+        textDecoration: `none`,
+        fontSize: `20px`,
+        marginLeft: `50px`
+      }}
+    >
+      About
+      </Link>
+    <Link
+      to="/about"
+      style={{
+        color: `white`,
+        textDecoration: `none`,
+        fontSize: `20px`,
+        marginLeft: `50px`
+      }}
+    >
+      Contact
+      </Link>
+  </HeaderWrapper >
 )
 
 Header.propTypes = {

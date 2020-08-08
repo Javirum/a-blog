@@ -1,0 +1,28 @@
+backend:
+  name: github
+  branch: master
+  repo: javirum/a-blog
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "team"
+    label: "Team"
+    folder: "src/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Team Member", name: "title", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "markdown" }
+
+  - name: "posts"
+    label: "Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Post Name", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Date", name: "date", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

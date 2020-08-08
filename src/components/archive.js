@@ -37,7 +37,7 @@ const Archive = () => {
   return (
     <>
       <aside style={{ padding: "1rem" }}>
-        <h3>Archive</h3>
+        <h3>Latest Posts</h3>
         <ArchiveList>
           {data.allMarkdownRemark.edges.map(edge => (
             <li key={edge.node.frontmatter.slug}>

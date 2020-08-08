@@ -4,7 +4,7 @@ import SEO from "../components/seo";
 import styled from "styled-components";
 
 const Post = styled.article`
-  box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
+  box-shadow: 0px 3px 10px lightgray;
   padding: 1rem;
   border-radius: 4px;
   margin-bottom: 1rem;

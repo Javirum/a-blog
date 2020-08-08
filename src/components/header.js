@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
   background: #663399;
-  padding: 10px;
+  padding: 20px;
 `;
 
 const Header = () => (
